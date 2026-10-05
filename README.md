@@ -1,69 +1,56 @@
-# Team Coffee Run (Android)
+<div align="center">
 
-A native Android application built with Kotlin and Jetpack Compose for coordinating and tracking group coffee orders.
+# ☕ Team Coffee Run — Order Aggregator
+### Native iOS Group Beverage Ordering System, Custom Drink Profiles & Order Aggregation
 
----
+[![iOS](https://img.shields.io/badge/iOS-17.0%2B-000000?style=for-the-badge&logo=apple&logoColor=white)](https://developer.apple.com/ios/)
+[![Swift](https://img.shields.io/badge/Swift-5.9%2B-F05138?style=for-the-badge&logo=swift&logoColor=white)](https://swift.org/)
+[![SwiftUI](https://img.shields.io/badge/UI-SwiftUI-0071E3?style=for-the-badge&logo=swift&logoColor=white)](https://developer.apple.com/xcode/swiftui/)
+[![License](https://img.shields.io/badge/License-MIT-CEFF00?style=for-the-badge&logoColor=black)](LICENSE)
 
-## Overview
+<br/>
 
-Team Coffee Run simplifies group beverage ordering for teams and study groups. The app allows users to customize individual drink orders across multiple team members (Alex, Jordan, Taylor, and Casey), preview dynamic pricing based on drink size, simulate order preparation with an animated countdown, rate beverages, and view organized daily order history.
+**Team Coffee Run** streamlines workplace beverage orders. Built with SwiftUI, it allows team members to configure custom drink preferences (roast, dairy type, sweeteners, temperature) and aggregates all selections into an organized barista summary.
 
----
+<br/>
 
-## Features
+[Overview](#-technical-overview) •
+[Features](#-key-features) •
+[Setup & Run](#-how-to-build-and-run) •
+[License](#-license)
 
-- **Multi-Member Pager Navigation**: Full-screen horizontal paging allowing seamless swiping across the Welcome screen and individual member ordering screens.
-- **Direct Tab Navigation**: Interactive header badges allowing instant navigation to any specific team member.
-- **Beverage Customization & Pricing Engine**:
-  - 6 drink options with base pricing (Coffee, Hot Chocolate, Tea, Latte, French Vanilla, Cappuccino).
-  - 4 cup sizes with automatic price scaling factors (S: 0.8x, M: 1.0x, L: 1.3x, XL: 1.6x).
-  - Granular adjustments for sugar cubes (0–4) and milk shots (0–4).
-- **Order Preparation & Feedback Flow**:
-  - 3-second animated preparation countdown timer.
-  - Interactive 5-point coffee cup rating system.
-  - Final order celebration screen upon completing all team orders.
-- **Chronological Order History**:
-  - Modal bottom sheet displaying past orders organized by date.
-  - Detailed breakdown of team member names, selected drinks, customizations, and ratings.
+</div>
+
+<br/>
 
 ---
 
-## Tech Stack & Architecture
+## 📌 Technical Overview
 
-- **Language**: Kotlin
-- **UI Toolkit**: Jetpack Compose with Material 3
-- **Architecture**: MVVM (Model-View-ViewModel) with State Hoisting
-- **State Management**: Kotlin Coroutines & `StateFlow`
-- **Minimum SDK**: API 26 (Android 8.0)
-- **Target SDK**: API 34 (Android 14)
-- **Build Tool**: Gradle Version Catalog (`libs.versions.toml`)
+**Team Coffee Run** streamlines workplace beverage orders. Built with SwiftUI, it allows team members to configure custom drink preferences (roast, dairy type, sweeteners, temperature) and aggregates all selections into an organized barista summary.
 
 ---
 
-## Project Structure
+## ✨ Key Features
 
-```text
-com.sheikhnaim.androidapp2/
-├── data/
-│   ├── CoffeeOrderItem.kt    # Order data model
-│   ├── OrderDay.kt           # Date grouping model for history
-│   └── OrderViewModel.kt     # Shared state & business logic
-├── ui/
-│   ├── theme/                # Material3 color, typography & theme definitions
-│   ├── components/           # Reusable Header, Rating, and Timer composables
-│   └── screens/              # Welcome, Order, History, and Success screens
-└── MainActivity.kt           # App entry point with edge-to-edge Compose configuration
-```
+- **Custom Beverage Profiles**: Detailed drink customization (milk alternatives, espresso shots, syrup pumps).
+- **Group Order Aggregation**: Combines individual team member requests into a categorized order list.
+- **Offline Persistence**: Retains frequent colleague orders for instant 1-tap re-ordering.
 
 ---
 
-## Getting Started
+## 🚀 How to Build and Run
 
-1. Clone the repository:
+### Steps
+1. **Clone the repository:**
    ```bash
-   git clone https://github.com/snaimio/AndroidApp2.git
+   git clone https://github.com/snaimio/team-coffee-run.git
+   cd team-coffee-run
    ```
-2. Open the project in **Android Studio** (Ladybug or newer recommended).
-3. Ensure your Gradle JDK is configured to **JDK 17** or **JDK 21**.
-4. Sync Gradle and run on an Android emulator or physical device running API 26+.
+2. Open the project in your IDE (Xcode / Android Studio / Browser) and run.
 
+---
+
+## 📄 License
+
+This project is licensed under the [MIT License](LICENSE).
